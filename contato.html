@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contatto - FATTORINO</title>
+
+    <!--Importação .css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/contato.css">
+    <link rel="shortcut icon" href="img/Design-sem-nome-_13_.ico" type="image/x-icon">
+
+    <!--Importação .js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-laptop-file" id="nav_logo"> fattorino</i>
+
+            <!--NavBar (Cabeçalho)-->
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item"><a href="about.html">Chi Siamo</a>
+                </li>
+
+                <li class="nav-item active"><a href="contato.html">Contatto</a>
+                </li>
+            </ul>
+            <button class="btn-default">
+                Scopri di più
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <!--Cabeçalho mobile-->
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html">Chi Siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato">Contactto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="contact">
+            <h2 class="section-title">Contattaci</h2>
+            <h3 class="section-subtitle">Siamo pronti ad aiutarti</h3>
+            <p>
+                Hai bisogno di supporto, hai domande o vuoi saperne di più sui nostri servizi? Contattaci tramite il
+                modulo sottostante o attraverso i nostri canali di assistenza.
+            </p>
+            <br>
+            <div id="contact-container">
+                <form id="contact-form">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Il tuo nome completo" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="tuaemail@esempio.com" required>
+
+                    <label for="phone">Telefono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX">
+
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Scrivi il tuo messaggio qui..."
+                        required></textarea>
+
+                    <button type="submit" class="btn-default">Invia</button>
+                </form>
+                <div id="contact-info">
+                    <br>
+                    <p><i class="fa-solid fa-phone"></i> WhatsApp: (+39) 33553-42321</p>
+                    <p><i class="fa-solid fa-envelope"></i> E-mail: paolo.sprocatti@dhominio.com</p>
+                    <p><i class="fa-solid fa-map-marker-alt"></i> Indirizzo: Corso del Popolo, 285, 45100 Rovigo IT</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.874668715942!2d11.790311315536035!3d44.80567877909871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a3d8a997a1a0d%3A0x1d8f5f8b9f8b9f8b!2sCorso%20del%20Popolo%2C%20285%2C%2045100%20Rovigo%20RO%2C%20It%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1633023226789!5m2!1spt-BR!2sbr"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">Domande Frequenti</h2>
+            <div class="faq-item">
+                <h3>Come posso contattare l'assistenza?</h3>
+                <p>Puoi contattarci tramite il modulo sopra, via e-mail o tramite il nostro WhatsApp.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quali sono gli orari di assistenza?</h3>
+                <p>Il nostro servizio di assistenza è disponibile dal lunedì al venerdì, dalle 9:00 alle 18:00.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Posso prenotare una visita?</h3>
+                <p>Sì, contattaci per prenotare una visita al nostro ufficio.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="img/wave.svg" alt="">
+        <div id="footer_items">
+            <span id="copyrigth">&copy; 2025 FATTORINO - Tutti i diritti riservati</span>
+            <div class="social-media-buttons">
+                <a href="https://wa.link/d3jp3a"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javacrip/script.js"></script> 
+</body>
+
+</html>

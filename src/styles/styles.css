@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('styles.css');
+@import url('testimonials.css');
+@import url('blog.css');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #fff9ea;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  section{
+    padding: 28px 8%;
+  }
+
+  .btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+  }
+
+  .btn-default:hover{
+    background-color: #f8d477;
+  }
+
+  .btn-default a {
+    outline: none; /* Remove o contorno ao focar */
+    text-decoration: none; /* Remove sublinhado, se houver */
+    color: #000;
+  }
+
+  .btn-default  {
+    outline: none; /* Remove o contorno ao focar */
+    text-decoration: none; /* Remove sublinhado, se houver */
+    color: #000;
+  }
+   
+  #mobile_btn {
+    display: none;
+  }
+
+  #mobile_menu {
+    display: none;
+  }
+
+  @media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;    /* Esconde a navbar */
+    }
+
+    #mobile_btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        }
+    }
+
+    .section-title{
+      color: rgb(68, 136, 239);
+    }
+
+    .section-subtitle{
+      font-size: 2.1875rem;
+    }
+
+    /*Desigin do Footer*/
+
+    footer{
+      background-color: #ffe8b4;
+    }
+    
+
+    #footer_items{
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 8% 24px 8%;
+      align-items: center;
+    }
+
+    #copyrigth{
+      color: #1d1d1d;
+      font-weight: 500;
+    }
+
+    @media screen and (max-width: 600px) {
+      #footer_items{
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    

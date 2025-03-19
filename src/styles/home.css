@@ -1,0 +1,131 @@
+#home {
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+
+#cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* Adicione a unidade de medida (px) */
+    margin-top: 5%;
+}
+
+#cta #title { /* Corrigido: use #title (ID) em vez de .tittle (classe) */
+    font-size: 3rem;
+    color: #1d1d1d;
+}
+
+#cta #title span { /* Corrigido: use #title (ID) em vez de .tittle (classe) */
+    color: rgb(68, 136, 239);
+}
+
+#cta .description{
+    font-size: 1.2rem;
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a{
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+/*Designi do botao do telefone*/
+#phone_button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#phone_button {
+    box-shadow: none;
+}
+
+/* Designi botoes de redes sociais */
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a hover{
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Forma amarela que fica atras da imagem*/
+#banner{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+}
+
+/*Posicionamento da imagem */
+#banner img{
+    height: 100%;
+    width: fit-content;
+    z-index: 2;
+}
+
+/*Nao faço ideia do que é*/
+.shape{
+    background-color: #ffe8b4;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }   
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+    #cta{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #phone_button button{
+        display: none;
+    }  
+
+}

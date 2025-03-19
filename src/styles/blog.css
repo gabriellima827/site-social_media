@@ -1,0 +1,73 @@
+/* Estilo para centralizar o conteúdo do blog */
+#blog {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do conteúdo */
+}
+
+.blog-container {
+    max-width: 800px; /* Define uma largura máxima para o conteúdo do blog */
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível */
+    text-align: left; /* Alinha o texto à esquerda dentro do container */
+}
+
+.blog-content {
+    text-align: left; /* Alinha o texto à esquerda dentro do container do blog */
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem; /* Adiciona espaço abaixo dos parágrafos */
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+    line-height: 1.6; /* Melhora a legibilidade com um espaçamento maior entre as linhas */
+}
+
+.blog-content strong {
+    font-weight: 600; /* Deixa o texto em negrito mais destacado */
+}
+
+.blog-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo da imagem */
+}
+
+.image-container {
+    text-align: center; /* Centraliza a imagem horizontalmente */
+}
+
+.igm-v {
+    display: inline-block; /* Permite que a imagem seja centralizada com text-align */
+    max-width: 100%;
+}
+
+/* Estilo do botão de voltar */
+.btn-default {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado do link */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Ícone de seta para a esquerda */
+.fa-arrow-left {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* Botão fixo no canto inferior direito */
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
