@@ -104,6 +104,13 @@
       align-items: center;
     }
 
+    footer img {
+      display: flex;
+      width: 100%; /* Garante que ocupa toda a largura */
+      margin-top: -1px; 
+    }
+    
+
     #copyrigth{
       color: #1d1d1d;
       font-weight: 500;
@@ -115,4 +122,30 @@
         gap: 20px;
       }
     }
+
+  /* Estilo para a mensagem de sucesso */
+  #success-message {
+  position: fixed; /* Fica no topo da página */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza a mensagem */
+  background-color: rgba(0, 128, 0, 0.7); /* Verde transparente */
+  color: white; /* Cor do texto */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  display: none; /* Inicialmente escondido */
+  z-index: 9999; /* Garante que fique por cima do conteúdo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.5s ease-in-out; /* Animação para aparecer e desaparecer */
+}
+
+  /* A classe 'show' faz a mensagem aparecer */
+  #success-message.show {
+  display: block;
+  opacity: 1;
+}
+
     

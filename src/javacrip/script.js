@@ -22,6 +22,22 @@ $(document).ready(function () {
         }
     });
 
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede o envio real do formulário, você pode remover isso se for enviar via servidor
+        
+        // Exibe a mensagem de sucesso
+        const successMessage = document.getElementById("success-message");
+        successMessage.classList.add("show");
+
+        // Reseta o formulário
+        document.getElementById("contact-form").reset();
+    
+        // Esconde a mensagem após 3 segundos
+        setTimeout(function() {
+            successMessage.classList.remove("show");
+        }, 3000);
+    });
+
 
     // Configurações do ScrollReveal
     ScrollReveal().reveal('#cta', {
