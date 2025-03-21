@@ -5,7 +5,7 @@ $(document).ready(function () {
         $(this).find('i').toggleClass('fa-bars fa-x');
     });
 
-
+    // Efeito de sombra no header ao rolar a página
     const sections = $('section');
     const navItems = $('.nav-item');
 
@@ -22,24 +22,33 @@ $(document).ready(function () {
         }
     });
 
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Impede o envio real do formulário, você pode remover isso se for enviar via servidor
+    // Validação do formulário de contato
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio real do formulário, você pode remover isso se for enviar via servidor
+            
+            // Exibe a mensagem de sucesso
+            const successMessage = document.getElementById("success-message");
+            if (successMessage) {
+                successMessage.classList.add("show");
+            }
+
+            // Reseta o formulário
+            contactForm.reset();
         
-        // Exibe a mensagem de sucesso
-        const successMessage = document.getElementById("success-message");
-        successMessage.classList.add("show");
+            // Esconde a mensagem após 3 segundos
+            setTimeout(function() {
+                if (successMessage) {
+                    successMessage.classList.remove("show");
+                }
+            }, 3000);
+        });
+    } else {
+        console.error("Formulário não encontrado!");
+    }
 
-        // Reseta o formulário
-        document.getElementById("contact-form").reset();
-    
-        // Esconde a mensagem após 3 segundos
-        setTimeout(function() {
-            successMessage.classList.remove("show");
-        }, 3000);
-    });
-
-
-    // Configurações do ScrollReveal
+    // ScrollReveal
     ScrollReveal().reveal('#cta', {
         origin: 'left',
         duration: 2000,
@@ -57,5 +66,4 @@ $(document).ready(function () {
         duration: 1000,
         distance: '20%'
     });
-
 });
